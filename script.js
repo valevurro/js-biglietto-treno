@@ -18,10 +18,10 @@ per controllare che la vostra logica sui prezzi funzioni correttamente, provate 
 const km = parseFloat(prompt("Quanti chilometri vuoi percorrere?"));
 
 // chiede l'età dell'utente
-const eta = parseInt(prompt("Quanti anni hai?"));
+const age = parseInt(prompt("Quanti anni hai?"));
 
 // calcola il prezzo in base ai km senza sconto
-let prezzoBiglietto = km * 0.21;
+let ticketPrice = km * 0.21;
 
 // applica lo sconto se minorenni 20% con valore 0.20 se over 65 sconto 40% con valore 0.40
 if (age < 18) {
@@ -32,7 +32,7 @@ if (age < 18) {
 }
 
 // arrotonda il prezzo a due decimali
-prezzoBiglietto = prezzoBiglietto.toFixed(2);
+ticketPrice = ticketPrice.toFixed(2);
 
 // mostra il prezzo finale all'utente
 const finalPrice = (ticketPrice * (1 - discount / 100));
